@@ -5,26 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>WebStudio</title>
   </head>
   <body>
-    <!-- Site header -->
+    <!-- portfolio header -->
     <header class="section header">
-      <a class="logo" href="./index.html">WebStudio</a>
+      <a class="logo link" href="./index.html"
+        ><span class="accent">Web</span>Studio</a
+      >
       <nav>
         <ul class="list menu">
-          <li><a class="menu-link" href="/index.html">Студія</a></li>
-          <li><a class="menu-link" href="/portfolio.html">Портфоліо</a></li>
-          <li><a class="menu-link" href="">Контакти</a></li>
-        </ul>
-        <ul class="list contacts">
+          <li><a class="menu-link link" href="/index.html">Студія</a></li>
           <li>
-            <a class="contacts-link" href="mailto:info@devstudio.com"
+            <a class="menu-link link active" href="/portfolio.html"
+              >Портфоліо</a
+            >
+          </li>
+          <li><a class="menu-link link" href="">Контакти</a></li>
+        </ul>
+        <ul class="list contacts-list">
+          <li>
+            <a class="contacts-link link" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
           </li>
           <li>
-            <a class="contacts-link" href="tel:+380961111111"
+            <a class="contacts-link link" href="tel:+380961111111"
               >+38 096 111 11 11</a
             >
           </li>
@@ -33,7 +45,7 @@
     </header>
     <main>
       <!-- Button services -->
-      <section class="portfolio-service">
+      <section class="section">
         <h2 class="hidden">Advantages</h2>
         <ul class="portfolio-list list">
           <li>
@@ -63,7 +75,7 @@
       </section>
 
       <!-- portfolio pages -->
-      <section class="portfolio-service">
+      <section class="section portfolio-service">
         <h2 class="title">Наш сервіс</h2>
         <ul class="list">
           <li class="item">
@@ -73,8 +85,8 @@
               width="370"
               height="294"
             />
-            <h3>Технокряк</h3>
-            <p>Веб-сайт</p>
+            <h3 class="portfolio-title">Технокряк</h3>
+            <p class="portfolio-text">Веб-сайт</p>
           </li>
           <li class="item">
             <img
@@ -83,8 +95,8 @@
               width="370"
               height="294"
             />
-            <h3>Постер New Orlean vs Golden Star</h3>
-            <p>Дизайн</p>
+            <h3 class="portfolio-title">Постер New Orlean vs Golden Star</h3>
+            <p class="portfolio-text">Дизайн</p>
           </li>
           <li class="item">
             <img
@@ -93,8 +105,8 @@
               width="370"
               height="294"
             />
-            <h3>Ресторан Seafood</h3>
-            <p>Додаток</p>
+            <h3 class="portfolio-title">Ресторан Seafood</h3>
+            <p class="portfolio-text">Додаток</p>
           </li>
           <li class="item">
             <img
@@ -103,8 +115,8 @@
               width="370"
               height="294"
             />
-            <h3>Проєкт Prime</h3>
-            <p>Маркетинг</p>
+            <h3 class="portfolio-title">Проєкт Prime</h3>
+            <p class="portfolio-text">Маркетинг</p>
           </li>
           <li class="item">
             <img
@@ -113,8 +125,8 @@
               width="370"
               height="294"
             />
-            <h3>Проєкт Boxes</h3>
-            <p>Додаток</p>
+            <h3 class="portfolio-title">Проєкт Boxes</h3>
+            <p class="portfolio-text">Додаток</p>
           </li>
           <li class="item">
             <img
@@ -123,8 +135,8 @@
               width="370"
               height="294"
             />
-            <h3>Inspiration has no Borders</h3>
-            <p>Веб-сайт</p>
+            <h3 class="portfolio-title">Inspiration has no Borders</h3>
+            <p class="portfolio-text">Веб-сайт</p>
           </li>
           <li class="item">
             <img
@@ -133,8 +145,8 @@
               width="370"
               height="294"
             />
-            <h3>Видання Limited Edition</h3>
-            <p>Дизайн</p>
+            <h3 class="portfolio-title">Видання Limited Edition</h3>
+            <p class="portfolio-text">Дизайн</p>
           </li>
           <li class="item">
             <img
@@ -143,8 +155,8 @@
               width="370"
               height="294"
             />
-            <h3>Проєкт LAB</h3>
-            <p>Маркетинг</p>
+            <h3 class="portfolio-title">Проєкт LAB</h3>
+            <p class="portfolio-text">Маркетинг</p>
           </li>
           <li class="item">
             <img
@@ -153,8 +165,8 @@
               width="370"
               height="294"
             />
-            <h3>Growing Business</h3>
-            <p>Додаток</p>
+            <h3 class="portfolio-title">Growing Business</h3>
+            <p class="portfolio-text">Додаток</p>
           </li>
         </ul>
       </section>
@@ -162,12 +174,14 @@
 
     <!-- Site Footer -->
     <footer class="footer">
-      <a class="logo footer-logo" href="#">WebStudio</a>
+      <a class="logo link" href="./index.html"
+        ><span class="accent">Web</span>Studio</a
+      >
       <address>
-        <ul class="footer-list">
+        <ul class="footer-list list">
           <li class="footer-item">
             <a
-              class="footer-link"
+              class="link address-link"
               href="https://goo.gl/maps/WjgSVZao61S94QmMA"
               target="_blank"
               rel="noopener noreferrer"
@@ -175,10 +189,10 @@
             >
           </li>
           <li class="footer-item">
-            <a class="footer-link" href="">info@devstudio.com</a>
+            <a class="link" href="">info@devstudio.com</a>
           </li>
           <li class="footer-item">
-            <a class="footer-link" href="">+38 096 111 11 11</a>
+            <a class="link" href="">+38 096 111 11 11</a>
           </li>
         </ul>
       </address>
