@@ -25,12 +25,25 @@ body {
   list-style: none;
 }
 
-.title {
+.section-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
 
   color: var(--title-trxt-color);
+}
+
+.hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 /* Site header */
@@ -43,14 +56,17 @@ body {
   color: #000000;
 }
 
-.menu-link {
+.nuv {
   font-weight: 500;
+  letter-spacing: 0.02em;
   line-height: 1.142;
+}
+
+.menu-link {
   color: var(--title-trxt-color);
 }
 
 .contacts-link {
-  font-weight: 500;
   color: var(--primary-text-color);
 }
 
@@ -80,7 +96,7 @@ body {
   color: #ffffff;
 }
 
-.hero .button {
+.hero-button {
   cursor: pointer;
   border: none;
 
@@ -95,7 +111,7 @@ body {
 
 /* Advantages */
 
-.advantages .title {
+.advantages-title {
   font-weight: 700;
   line-height: 1.142;
   text-transform: uppercase;
@@ -125,15 +141,13 @@ body {
 .footer {
   background-color: #2f303a;
 }
-.footer .logo {
-  color: #ffffff;
-}
 
 .footer .link {
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
 
+.footer > .logo,
 .footer .address-link {
   color: #ffffff;
 }
@@ -160,7 +174,7 @@ body {
 
 /* portfolio pages */
 
-.portfolio-title {
+.service-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -170,7 +184,7 @@ body {
   color: var(--title-trxt-color);
 }
 
-.portfolio-text {
+.service-text {
   font-size: 16px;
   line-height: 1.87;
 }
