@@ -46,6 +46,32 @@ body {
   margin: -1px;
 }
 
+.container {
+  padding: 0 15px;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.section-title {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 /* Site header */
 
 .logo {
@@ -84,9 +110,15 @@ body {
 /* hero */
 
 .hero {
+  padding: 200px 0;
+  text-align: center;
   background-color: #2f303a;
 }
 .hero-title {
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -97,6 +129,7 @@ body {
 }
 
 .hero-button {
+  padding: 10px 32px;
   cursor: pointer;
   border: none;
 
@@ -106,12 +139,20 @@ body {
   letter-spacing: 0.06em;
 
   color: #ffffff;
+
   background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* Advantages */
 
+.advantages-item {
+  width: 270px;
+}
+
 .advantages-title {
+  margin-bottom: 10px;
   font-weight: 700;
   line-height: 1.142;
   text-transform: uppercase;
@@ -121,9 +162,26 @@ body {
 
 /* Our classes */
 
+.classes {
+  padding-top: 0;
+}
+
+.classes .section-title {
+  margin-bottom: 50px;
+}
 /* Team */
 
+.team .section-title {
+  margin-bottom: 50px;
+}
+
+.item-img {
+  margin-bottom: 30px;
+}
+
 .team-title {
+  margin-bottom: 10px;
+  padding: 0 20px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.187;
@@ -132,6 +190,9 @@ body {
 }
 
 .team-text {
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 16px;
   line-height: 1.187;
 }
@@ -139,6 +200,7 @@ body {
 /* Site Footer */
 
 .footer {
+  padding: 60px 0;
   background-color: #2f303a;
 }
 
@@ -147,9 +209,17 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer > .logo,
+.footer .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer .logo,
 .footer .address-link {
   color: #ffffff;
+}
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 /*-------- portfolio-page -------- */
