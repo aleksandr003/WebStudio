@@ -26,9 +26,11 @@ body {
 }
 
 .section-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
+  text-align: center;
 
   color: var(--title-trxt-color);
 }
@@ -54,10 +56,6 @@ body {
 
 .section {
   padding: 94px 0;
-}
-
-.section-title {
-  text-align: center;
 }
 
 h1,
@@ -110,6 +108,12 @@ img {
   display: inline-block;
   padding: 32px 0;
   color: var(--title-trxt-color);
+
+  transition: color 250ms linear;
+}
+
+.menu-item {
+  position: relative;
 }
 
 .menu-item:not(:last-child) {
@@ -129,6 +133,8 @@ img {
   display: flex;
   align-items: center;
   color: var(--primary-text-color);
+
+  transition: color 250ms linear;
 }
 
 .menu-link:hover,
@@ -146,11 +152,24 @@ img {
   color: var(--accent-color);
 }
 
+.active::before {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+}
+
 .contacts-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms linear;
 }
 
 /* hero */
@@ -242,21 +261,32 @@ img {
   justify-content: space-between;
 }
 
+.classes-item {
+  position: relative;
+}
+
 .classes {
   padding-top: 0;
 }
 
-.classes .section-title {
-  margin-bottom: 50px;
+.classes-title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 0;
+  font-weight: 700;
+  line-height: 1.142;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
 }
+
 /* Team */
 
 .team {
   background-color: #f5f4fa;
-}
-
-.team .section-title {
-  margin-bottom: 50px;
 }
 
 .team-list {
@@ -315,12 +345,16 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+
+  transition: background-color 250ms linear;
 }
 
 .item-icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-text-color);
+
+  transition: fill 250ms linear;
 }
 
 .socials .link:hover {
@@ -329,6 +363,42 @@ img {
 
 .socials .link:hover .item-icon {
   fill: #ffffff;
+}
+
+/* ------ Regular customers ------ */
+
+.regulclients .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.regulclients .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 4px;
+
+  transition: border-color 250ms linear;
+}
+
+.regul-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--primary-text-color);
+
+  transition: fill 250ms linear;
+}
+
+.regulclients .link:hover .regul-icon {
+  fill: var(--accent-color);
+}
+
+.regulclients .link:hover {
+  border-color: var(--accent-color);
 }
 
 /* Site Footer */
@@ -415,6 +485,9 @@ img {
 
   color: var(--title-trxt-color);
   background-color: #f5f4fa;
+
+  transition: background-color 250ms linear, color 250ms linear,
+    box-shadow 250ms linear;
 }
 
 .portfolio-button:hover,
@@ -434,6 +507,7 @@ img {
 }
 
 .service-item {
+  position: relative;
   margin-right: 30px;
   margin-bottom: 30px;
   flex-basis: calc((100% - 60px) / 3);
@@ -445,6 +519,11 @@ img {
 
 .service-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.service-item .elemrnt {
+  position: relative;
+  overflow: hidden;
 }
 
 .service-item .box {
@@ -468,4 +547,80 @@ img {
 .service-text {
   font-size: 16px;
   line-height: 1.87;
+}
+
+.service-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform, 250ms linear;
+}
+
+.service-item .elemrnt:hover .service-info {
+  transform: translateY(0);
+}
+
+.service-info .info-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+/* pointer-events: none; */
+
+/* backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* pointer-events: none; */
+}
+
+.backdrop .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop .button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.backdrop .button svg {
+  display: block;
+  justify-content: center;
+  align-items: center;
 }
