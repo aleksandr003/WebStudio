@@ -1,0 +1,61 @@
+/* block socials */
+
+.socials {
+  width: 206px;
+  margin: 0 auto;
+}
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+}
+.socials__item {
+  display: flex;
+}
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-text-color);
+
+  transition: fill 250ms linear;
+
+  .socials__link:hover &,
+  .socials__link:focus & {
+    fill: #ffffff;
+  }
+}
+
+// footer
+
+.footer {
+  & .socials__link {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  & .socials__link:hover {
+    background-color: var(--accent-color);
+  }
+
+  & .socials__icon {
+    fill: #ffffff;
+  }
+
+  & .socials {
+    margin-left: 85px;
+  }
+}
