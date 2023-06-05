@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,7 +47,17 @@
           <ul class="navigation-contacts list">
             <li class="navigation-contacts__item">
               <a
-                class="navigation-contacts__link link"
+                class="navigation-contacts__link navigation-contacts__link--tel link"
+                href="tel:+380961111111"
+                ><svg class="navigation-contacts__icon">
+                  <use href="/images/sprite.svg#icon-icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="navigation-contacts__item">
+              <a
+                class="navigation-contacts__link navigation-contacts__link--mail link"
                 href="mailto:info@devstudio.com"
                 ><svg class="navigation-contacts__icon">
                   <use href="/images/sprite.svg#icon-icon-email"></use>
@@ -54,16 +65,25 @@
                 info@devstudio.com</a
               >
             </li>
-            <li class="navigation-contacts__item">
-              <a class="navigation-contacts__link link" href="tel:+380961111111"
-                ><svg class="navigation-contacts__icon">
-                  <use href="/images/sprite.svg#icon-icon-tel"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
+            <li class="block-socials">
+              <a class="link" href="#">Instagram</a>
+              <a class="link" href="#">Twitter</a>
+              <a class="link" href="#">Facebook</a>
+              <a class="link" href="#">LinkedIn</a>
             </li>
           </ul>
         </nav>
+        <button class="button-menu" type="button" data-menu-button>
+          <svg
+            class="icons-button"
+            width="40px"
+            height="40px"
+            aria-label="mobile menu switch"
+          >
+            <use class="icon-menu" href="/images/sprite.svg#icon-menu40"></use>
+            <use class="icon-cros" href="/images/sprite.svg#icon-close40"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -82,7 +102,7 @@
           <ul class="advantages list">
             <li class="advantages__item icon-antenna">
               <div class="advantages__block">
-                <svg class="advantages__icon">
+                <svg class="advantages__icon" width="70px" height="70px">
                   <use href="/images/sprite.svg#icon-antenna"></use>
                 </svg>
               </div>
@@ -94,7 +114,7 @@
             </li>
             <li class="advantages__item icon-clock">
               <div class="advantages__block">
-                <svg class="advantages__icon">
+                <svg class="advantages__icon" width="70px" height="70px">
                   <use href="/images/sprite.svg#icon-clock"></use>
                 </svg>
               </div>
@@ -106,7 +126,7 @@
             </li>
             <li class="advantages__item icon-diagram">
               <div class="advantages__block">
-                <svg class="advantages__icon">
+                <svg class="advantages__icon" width="70px" height="70px">
                   <use href="/images/sprite.svg#icon-diagram"></use>
                 </svg>
               </div>
@@ -117,7 +137,7 @@
             </li>
             <li class="advantages__item icon-astronaut">
               <div class="advantages__block">
-                <svg class="advantages__icon">
+                <svg class="advantages__icon" width="70px" height="70px">
                   <use href="/images/sprite.svg#icon-astronaut"></use>
                 </svg>
               </div>
@@ -180,8 +200,7 @@
                 class="team__img"
                 src="./images/teacher1.jpg"
                 alt="guy with glasses"
-                width="270"
-                height="260"
+                max-width="450"
               />
               <div class="team__box">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
@@ -225,8 +244,7 @@
                 class="team__img"
                 src="./images/teacher2.jpg"
                 alt="girl with glasses"
-                width="270"
-                height="260"
+                max-width="450"
               />
               <div class="team__box">
                 <h3 class="team__title">Ольга Рєпіна</h3>
@@ -270,8 +288,7 @@
                 class="team__img"
                 src="./images/teacher3.jpg"
                 alt="guy"
-                width="270"
-                height="260"
+                max-width="450"
               />
               <div class="team__box">
                 <h3 class="team__title">Микола Тарасов</h3>
@@ -315,8 +332,7 @@
                 class="team__img"
                 src="./images/teacher4.jpg"
                 alt="guy with glasses"
-                width="270"
-                height="260"
+                max-width="450"
               />
               <div class="team__box">
                 <h3 class="team__title">Михайло Єрмаков</h3>
@@ -366,42 +382,42 @@
           <ul class="clients__list list">
             <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo1"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo2"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo3"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo4"></use>
                 </svg>
               </a>
             </li>
-            <li class="item">
+            <li class="clients__item">
               <a href="#" class="clients__link">
-                <svg class="clients__icon">
+                <svg class="clients__icon" width="106" height="60">
                   <use href="/images/sprite.svg#icon-Logo5"></use>
                 </svg>
               </a>
@@ -415,7 +431,7 @@
     <footer class="footer">
       <div class="container">
         <div class="block-inform">
-          <div>
+          <div class="block-inform__company">
             <a class="logo link" href="./index.html"
               ><span class="accent">Web</span>Studio</a
             >

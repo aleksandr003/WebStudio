@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,19 +24,19 @@
     <header class="header">
       <div class="container">
         <a class="logo link" href="./index.html"
-          ><span class="accent">Web</span>Studio</a
+          ><span class="logo--accent">Web</span>Studio</a
         >
         <nav class="navigation">
           <ul class="navigation-menu list">
             <li class="navigation-menu__item">
-              <a class="navigation-menu__link link" href="/index.html"
+              <a
+                class="navigation-menu__link link navigation-menu__link--active"
+                href="/index.html"
                 >Студія</a
               >
             </li>
             <li class="navigation-menu__item">
-              <a
-                class="navigation-menu__link link navigation-menu__link--active"
-                href="/portfolio.html"
+              <a class="navigation-menu__link link" href="/portfolio.html"
                 >Портфоліо</a
               >
             </li>
@@ -46,7 +47,17 @@
           <ul class="navigation-contacts list">
             <li class="navigation-contacts__item">
               <a
-                class="navigation-contacts__link link"
+                class="navigation-contacts__link navigation-contacts__link--tel link"
+                href="tel:+380961111111"
+                ><svg class="navigation-contacts__icon">
+                  <use href="/images/sprite.svg#icon-icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="navigation-contacts__item">
+              <a
+                class="navigation-contacts__link navigation-contacts__link--mail link"
                 href="mailto:info@devstudio.com"
                 ><svg class="navigation-contacts__icon">
                   <use href="/images/sprite.svg#icon-icon-email"></use>
@@ -54,16 +65,25 @@
                 info@devstudio.com</a
               >
             </li>
-            <li class="navigation-contacts__item">
-              <a class="navigation-contacts__link link" href="tel:+380961111111"
-                ><svg class="navigation-contacts__icon">
-                  <use href="/images/sprite.svg#icon-icon-tel"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
+            <li class="block-socials">
+              <a class="link" href="#">Instagram</a>
+              <a class="link" href="#">Twitter</a>
+              <a class="link" href="#">Facebook</a>
+              <a class="link" href="#">LinkedIn</a>
             </li>
           </ul>
         </nav>
+        <button class="button-menu" type="button" data-menu-button>
+          <svg
+            class="icons-button"
+            width="40px"
+            height="40px"
+            aria-label="mobile menu switch"
+          >
+            <use class="icon-menu" href="/images/sprite.svg#icon-menu40"></use>
+            <use class="icon-cros" href="/images/sprite.svg#icon-close40"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -310,7 +330,7 @@
     <footer class="footer">
       <div class="container">
         <div class="block-inform">
-          <div>
+          <div class="block-inform__company">
             <a class="logo link" href="./index.html"
               ><span class="accent">Web</span>Studio</a
             >

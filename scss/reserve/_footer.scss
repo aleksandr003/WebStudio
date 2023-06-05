@@ -1,14 +1,6 @@
 .footer {
   padding: 60px 0;
   background-color: #2f303a;
-  text-align: center;
-
-  & .container {
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
 }
 
 .footer .link {
@@ -29,11 +21,11 @@
   margin-bottom: 9px;
 }
 
-// .footer .container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .footer .title {
   margin-bottom: 20px;
@@ -45,25 +37,14 @@
 }
 
 .block-inform {
-  // display: flex;
-  // align-items: baseline;
-  margin-bottom: 60px;
-  @media screen and (min-width: 767px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 50%;
-  }
-}
-
-.block-inform__company {
-  margin-bottom: 60px;
+  display: flex;
+  align-items: baseline;
+  width: 50%;
 }
 
 .block-form {
+  width: 50%;
+
   & input {
     font-size: 16px;
     line-height: 1.25;
@@ -77,16 +58,5 @@
     border-radius: 4px;
     background-color: inherit;
     padding: 15px 16px;
-    margin-bottom: 20px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 50%;
-  }
-}
-
-.footer .socials {
-  @media screen and (min-width: 767px) {
-    margin: 0;
   }
 }

@@ -11,4 +11,12 @@
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
   }
+
+  // menu open and close
+  const menuBtnRef = document.querySelector("[data-menu-button]");
+  const xxx = document.querySelector(".navigation");
+  menuBtnRef.addEventListener("click", () => {
+    menuBtnRef.classList.toggle("is-open");
+    xxx.classList.toggle("is-open");
+  });
 })();
